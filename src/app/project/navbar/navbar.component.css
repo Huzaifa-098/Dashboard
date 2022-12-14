@@ -1,0 +1,69 @@
+/* .example-container {
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+} */
+.example-container {
+  width: 400px;
+  height: 200px;
+  margin: 12px;
+  border: 1px solid #555;
+  background-color: aqua;
+}
+/* .mainTabsDiv {
+    } */
+.cursor {
+  cursor: pointer;
+}
+
+.tabs {
+  background: #272f52;
+  color: #fafafa;
+  padding: 14px;
+}
+
+.tabs.active {
+  color: #59caea;
+  border-right: 5px solid;
+}
+
+.tabs:hover {
+  color: #59caea;
+  cursor: pointer;
+}
+
+.DryFruit {
+  font: normal normal 500 20px/22px Poppins;
+  letter-spacing: 0px;
+  color: white;
+  opacity: 1;
+  margin-bottom: 41px;
+  text-align: center;
+  margin-top: 37px;
+}
+.mainSideNav {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 27%;
+  justify-content: space-between;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+span {
+  width: 100%;
+}
+.col-sm-2 {
+  width: 106%;
+}

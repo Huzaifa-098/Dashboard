@@ -1,0 +1,44 @@
+.example-card {
+  max-width: 300px;
+}
+
+.example-header-image {
+  background-image: url("../../../assets/download (1).jpg");
+  background-size: cover;
+}
+.example-header-image1 {
+  background-image: url("../../../assets/download.jpg");
+  background-size: cover;
+}
+.example-header-image2 {
+  background-image: url("../../../assets/licensed-image.jpg ");
+  background-size: cover;
+}
+.example-header-image3 {
+  background-image: url("../../../assets/apricots-Dried.jpg");
+  background-size: cover;
+}
+.example-header-image4 {
+  background-image: url("../../../assets/images.jpg");
+  background-size: cover;
+}
+.example-header-image5 {
+  background-image: url("../../../assets/the-health-benefits-of-nuts-main-image-700-350-bb95ac2.jpg");
+  background-size: cover;
+}
+
+/* .flex {
+
+  display: flex;
+  justify-content: center;
+  margin-top: -26%;
+}
+.flex1 {
+ 
+  display: flex;
+  justify-content: end;
+  margin-top: -22%;
+} */
+.img {
+  height: 120px;
+}

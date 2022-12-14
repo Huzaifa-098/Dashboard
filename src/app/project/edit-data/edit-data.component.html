@@ -1,0 +1,60 @@
+<mat-card>
+  <form [formGroup]="infoFor" (submit)="update()">
+    <mat-form-field
+      style="width: 230px"
+      class="example-full-width"
+      appearance="outline"
+    >
+      <mat-label>Name</mat-label>
+      <input matInput type="text" required formControlName="name" />
+    </mat-form-field>
+    <!-- <div></div> -->
+    <mat-form-field
+      style="width: 230px"
+      class="example-full-width"
+      appearance="outline"
+    >
+      <mat-label>Protien</mat-label>
+      <input matInput type="text" required formControlName="name" />
+    </mat-form-field>
+    <br />
+    <mat-form-field
+      style="width: 100%"
+      class="example-full-width"
+      appearance="outline"
+    >
+      <mat-label>Benefit</mat-label>
+      <textarea
+        rows="8"
+        matInput
+        type="text"
+        required
+        formControlName="name"
+      ></textarea>
+    </mat-form-field>
+    <br /><br />
+
+    <div mat-dialog-actions [align]="'end'">
+      <button
+        style="margin-right: 232px"
+        type="submit"
+        type="reset"
+        mat-flat-button
+        color="primary"
+      >
+        update
+      </button>
+      <button
+        style="margin-left: 22px"
+        mat-flat-button
+        color="warn"
+        mat-dialog-close
+      >
+        Close
+      </button>
+    </div>
+  </form>
+</mat-card>
+<!-- <div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div> -->

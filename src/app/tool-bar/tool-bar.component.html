@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <div class="container-fluid text-end">
+    <div class="row">
+      <div class="col-sm-11"></div>
+      <div class="col-sm-1">
+        <img
+          style="height: 55px; cursor: pointer"
+          [matMenuTriggerFor]="menu"
+          src="../../assets/Profile_avatar_placeholder_large.png"
+        />
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Logout</button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>

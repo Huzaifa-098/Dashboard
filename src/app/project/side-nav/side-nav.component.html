@@ -1,0 +1,69 @@
+<!-- <app-nav></app-nav> -->
+<div class="col-sm-2">
+  <mat-card style="height: 99.5vh; background: #272f52">
+    <!-- <div class="mainSideNav" style="overflow: auto; font-size: 14px"> -->
+    <div>
+      <p class="DryFruit">DtyFruit APP</p>
+      <span class="tabs d-flex align-items-end" routerLinkActive="active">
+        <mat-icon class="mr-4">home</mat-icon>
+        Dashboard
+      </span>
+      <span
+        class="tabs d-flex align-items-end"
+        routerLink="/hi"
+        routerLinkActive="active"
+      >
+        <mat-icon class="mr-4">graphic_eq</mat-icon>
+
+        Graph Data
+      </span>
+      <span
+        class="tabs d-flex align-items-end"
+        routerLinkActive="active"
+        (click)="openClosePanel()"
+      >
+        <mat-icon class="mr-4">summarize</mat-icon>
+        <span style="width: 100%" routerLink="/details">DryFruit</span>
+      </span>
+      <span
+        class="tabs d-flex align-items-end"
+        routerLink="/info"
+        routerLinkActive="active"
+      >
+        <mat-icon>note_add</mat-icon>
+        Information
+      </span>
+    </div>
+    <div class="text-center mb-3"></div>
+    <!-- </div> -->
+  </mat-card>
+</div>
+
+<!-- <app-nav></app-nav>
+<mat-card style="width: 25%; height: 95vh; background: #272f52">
+  <div class="mainSideNav" style="overflow: auto; font-size: 14px"> -->
+<!-- <div>
+    <p class="DryFruit">DtyFruit APP</p>
+    <span
+      class="tabs d-flex align-items-end"
+      routerLink="/dashboard"
+      routerLinkActive="active"
+    >
+      <mat-icon class="mr-4">home</mat-icon>
+      Dashboard
+    </span>
+    <span
+      class="tabs d-flex align-items-end"
+      routerLinkActive="active"
+      (click)="openClosePanel()"
+    >
+      <mat-icon class="mr-4">summarize</mat-icon>
+      <span style="width: 100%" routerLink="/details">DryFruit</span>
+    </span>
+    <span class="tabs d-flex align-items-end" routerLinkActive="active">
+      <mat-icon>note_add</mat-icon>
+      Information
+    </span>
+  </div>
+  <div class="text-center mb-3"></div>
+   </div> -->

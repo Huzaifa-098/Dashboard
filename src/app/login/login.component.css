@@ -1,0 +1,88 @@
+/* .container{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 60%;
+     padding: 50px;
+     ; */
+    /* width: 30%;   
+        overflow:hidden !important;  
+        margin: auto;  
+        margin-top: 30px !important;
+        padding: 60px;  
+        background: #1d7a06;  */
+
+   /* background:antiquewhite; */
+/* }
+h2{  
+    text-align: center;  
+    color: white;  
+    padding: 10px;
+}
+.btnbtn-primary{
+background-color: aquamarine;
+width: 100%;
+border-radius: .5rem;
+height: 20%;
+}
+.error-sizing{
+    font-size: 15px;
+}
+.example-full-width{
+    width: 100%;
+}
+.example-form{
+    margin-top: 60px;
+  
+} */
+.example-form {
+    min-width: 150px;
+    max-width: 500px; 
+    width: 100%;
+    /* width:max-content */
+  }
+  .example-full-width:hover {opacity: 1}
+  .example-full-width {
+    width: 100%;
+
+   
+  }
+  .img:hover{
+    background-color: yellow;
+  }
+
+  .login-button {
+    width: 100%;
+    margin-top: 10px;
+    height: 56px;
+    background: #197056 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 3px #00000029;
+    border-radius: 12px;
+    opacity: 1;
+    font: normal normal medium 20px/31px Poppins;
+    letter-spacing: 0px;
+    color: #ffffff;
+  }
+  .login-mat-card-title {
+    text-align: center;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    margin-bottom: 38px;
+  }
+  .login-mat-card {
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 370px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 12px #00000066;
+    border-radius: 12px;
+    opacity: 1;
+  }
+  .login-screen-container {
+    height: 97.5vh;
+    background-color: #197056;
+    font-family: "Poppins";
+  }    
+ 
+
