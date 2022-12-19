@@ -6,7 +6,7 @@
       appearance="outline"
     >
       <mat-label>Name</mat-label>
-      <input matInput type="text" required formControlName="name" />
+      <input matInput type="text" required [formControl]="name" />
     </mat-form-field>
     <!-- <div></div> -->
     <mat-form-field
@@ -15,7 +15,7 @@
       appearance="outline"
     >
       <mat-label>Protien</mat-label>
-      <input matInput type="text" required formControlName="protien" />
+      <input matInput type="text" required [formControl]="protien" />
     </mat-form-field>
     <br />
     <mat-form-field
@@ -29,14 +29,15 @@
         matInput
         type="text"
         required
-        formControlName="benefit"
+        [formControl]="benefit"
       ></textarea>
     </mat-form-field>
+
     <br /><br />
 
     <div mat-dialog-actions [align]="'end'">
       <button
-        (click)="update()"
+        (click)="addData1()"
         style="margin-right: 232px"
         type="submit"
         type="reset"
@@ -57,5 +58,5 @@
   </form>
 </mat-card>
 <!-- <div mat-dialog-actions>
-  <button mat-button mat-dialog-close>Close</button>
-</div> -->
+    <button mat-button mat-dialog-close>Close</button>
+  </div> -->

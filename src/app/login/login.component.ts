@@ -1,3 +1,4 @@
+import { LocalStorageService } from './../services/local-storage.service';
 import { ApiService } from './../services/api.service';
 import { UsernameValidators } from './../signup/username.validator';
 import {
@@ -17,6 +18,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  // ID: any;
   credentials: any = {};
   form: FormGroup;
   emailFormControl = new FormControl('', [
@@ -45,21 +47,17 @@ export class LoginComponent implements OnInit {
     };
     this.ApiService.login(data).subscribe((result) => {
       console.log(result);
+      console.log(result.email);
+      console.log(result.id);
       if (result.isAuth == true) {
+        localStorage.setItem('ID', result.id);
+
         this.router.navigateByUrl('/dash');
+        this.form.reset();
       } else {
         alert('Basit Bhai apna kam kryn ap');
       }
     });
-
-    //  this.ApiService.login(data).subscribe((result) => {
-    //   if (result.success) {
-    //     console.log(result);
-    //     alert(result.message);
-    //   } else {
-    //     alert(result.message);
-    //   }
-    // });
   }
 }
 

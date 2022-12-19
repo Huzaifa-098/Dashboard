@@ -35,6 +35,8 @@ import { OtpComponent } from './project/otp/otp.component';
 import { HiChartComponent } from './project/hi-chart/hi-chart.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AddDataComponent } from './project/add-data/add-data.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +53,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     HiChartComponent,
     OtpComponent,
     ToolBarComponent,
+    AddDataComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,6 +74,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     HighchartsChartModule,
     HttpClientModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

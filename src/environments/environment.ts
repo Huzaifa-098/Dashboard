@@ -7,6 +7,11 @@ export const environment = {
 };
 export const baseUrl = `http://192.168.2.20:3000/api/`;
 export const Url = `http://192.168.2.20:3000/api/`;
+export const logout = `http://192.168.2.20:3000/api/`;
+export const add = `http://192.168.2.20:3000/api/`;
+export const addData = `http://192.168.2.20:3000/api/post`;
+export const Delete = `http://192.168.2.20:3000/api/`;
+export const edit = `http://192.168.2.20:3000/api/`;
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

@@ -202,7 +202,7 @@
         <a href="#">SignUp</a>
       </mat-card-title>
       <mat-card-content>
-        <form [formGroup]="Form" (ngSubmit)="onSubmit()" class="example-form">
+        <form [formGroup]="Form" class="example-form">
           <!-- <mat-form-field class="example-full-width" appearance="outline">
             <mat-label>UserName</mat-label>
             <input
@@ -223,13 +223,13 @@
             <input
               type="text"
               matInput
-              formControlName="FirstName"
+              [formControl]="firstname"
               placeholder="First Name"
             />
-            <mat-error *ngIf="!FirstName.hasError('required')">
+            <mat-error *ngIf="!firstname.hasError('required')">
               Please enter a valid First Name
             </mat-error>
-            <mat-error *ngIf="FirstName.hasError('required')">
+            <mat-error *ngIf="firstname.hasError('required')">
               FirstName <strong>required</strong>
             </mat-error>
           </mat-form-field>
@@ -238,13 +238,13 @@
             <input
               type="text"
               matInput
-              formControlName="LastName"
+              [formControl]="lastname"
               placeholder="Last Name"
             />
-            <mat-error *ngIf="!LastName.hasError('required')">
+            <mat-error *ngIf="!lastname.hasError('required')">
               Please enter a valid Last Name
             </mat-error>
-            <mat-error *ngIf="LastName.hasError('required')">
+            <mat-error *ngIf="lastname.hasError('required')">
               Last Name <strong>required</strong>
             </mat-error>
           </mat-form-field>
@@ -268,7 +268,7 @@
             <input
               type="email"
               matInput
-              formControlName="email"
+              [formControl]="email"
               placeholder="Enter Email"
             />
             <mat-error
@@ -286,12 +286,12 @@
               type="text"
               matInput
               mat-icon-button
-              formControlName="Password"
+              [formControl]="password"
               placeholder="Enter your Password"
             />
             <mat-error
               *ngIf="
-                Password.hasError('minLength') && !Password.hasError('required')
+                password.hasError('minLength') && !password.hasError('required')
               "
             >
               Please enter a valid Password
@@ -306,31 +306,31 @@
               type="text"
               matInput
               mat-icon-button
-              formControlName="CheckPassword"
+              [formControl]="password2"
               placeholder="CheckPassword "
             />
             <mat-error
               *ngIf="
-                CheckPassword.hasError('minLength') &&
-                !CheckPassword.hasError('required')
+                password2.hasError('minLength') &&
+                !password2.hasError('required')
               "
             >
               Please enter the Same Password
             </mat-error>
             <mat-error
               *ngIf="
-                CheckPassword.hasError('Length') &&
-                !CheckPassword.hasError('required')
+                password2.hasError('Length') && !password2.hasError('required')
               "
             >
               Please enter the Same Password
             </mat-error>
-            <mat-error *ngIf="CheckPassword.hasError('required')">
+            <mat-error *ngIf="password2.hasError('required')">
               Password must be at least 8 characters <strong>required</strong>
             </mat-error>
           </mat-form-field>
           <button
             mat-raiSsed-button
+            (click)="onSubmit()"
             class="login-button"
             [disabled]="!Form"
             type="submit"

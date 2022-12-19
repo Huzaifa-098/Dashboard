@@ -1,15 +1,19 @@
+import { ApiService } from './../services/api.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tool-bar',
   templateUrl: './tool-bar.component.html',
-  styleUrls: ['./tool-bar.component.css']
+  styleUrls: ['./tool-bar.component.css'],
 })
 export class ToolBarComponent implements OnInit {
+  constructor(private ApiService: ApiService, private router: Router) {}
 
-  constructor() { }
+  ngOnInit(): void {}
+  logout() {
+    localStorage.clear();
 
-  ngOnInit(): void {
+    this.router.navigate(['/auth']);
   }
-
 }

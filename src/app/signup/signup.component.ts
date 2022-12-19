@@ -38,58 +38,50 @@ export class SignupComponent implements OnInit {
   // }
   Form: FormGroup;
 
-  UserName = new FormControl('', [Validators.required]);
-  FirstName = new FormControl('', [Validators.required]);
-  LastName = new FormControl('', [Validators.required]);
-  DOB = new FormControl('', [Validators.required]);
+  // UserName = new FormControl('', [Validators.required]);
+  firstname = new FormControl('', [Validators.required]);
+  lastname = new FormControl('', [Validators.required]);
+  // DOB = new FormControl('', [Validators.required]);
   email = new FormControl('', [Validators.required, Validators.email]);
-  Password = new FormControl('', [
-    Validators.required,
-    Validators.minLength(8),
-    Validators.maxLength(12),
-  ]);
-  CheckPassword = new FormControl('', [
-    Validators.required,
-    Validators.minLength(8),
-    Validators.maxLength(12),
-  ]);
+  password = new FormControl('', [Validators.required]);
+  password2 = new FormControl('', [Validators.required]);
 
   constructor(
     private fb: FormBuilder,
     private ApiService: ApiService,
     private router: Router
-  ) {
-    this.Form = fb.group({
-      UserName: ['', Validators.required],
-      FirstName: ['', Validators.required],
-      LastName: ['', Validators.required],
-      DOB: ['', Validators.required],
+  ) {}
+  ngOnInit(): void {
+    this.Form = this.fb.group({
+      // UserName: ['', Validators.required],
+      firstname: ['', Validators.required],
+      lastname: ['', Validators.required],
+      // DOB: ['', Validators.required],
       email: ['', Validators.required],
-      Password: ['', Validators.required],
-      CheckPassword: ['', Validators.required],
+      password: ['', Validators.required],
+      password2: ['', Validators.required],
     });
   }
 
-  ngOnInit(): void {}
   onSubmit() {
     console.log(this.Form);
     let data = {
-      FirstName: this.FirstName.value,
-      LastName: this.LastName.value,
+      firstname: this.firstname.value,
+      lastname: this.lastname.value,
       email: this.email.value,
-      password: this.Password.value,
-      CheckPassword: this.CheckPassword.value,
+      password: this.password.value,
+      password2: this.password2.value,
     };
     this.ApiService.signup(data).subscribe((result) => {
       console.log(result);
-      if (result.auth == true) {
+      if (result.succes == true) {
         this.router.navigateByUrl('/auth');
       } else {
-        alert('Basit Bhai apna kam kryn ap');
+        alert('basit bhai apna kaam kryn');
       }
     });
   }
 }
-export interface FavoriteChangedEventArgs {
-  newValue: boolean;
-}
+// export interface FavoriteChangedEventArgs {
+//   newValue: boolean;
+// }

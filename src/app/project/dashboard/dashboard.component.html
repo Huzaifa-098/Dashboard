@@ -5,7 +5,7 @@
     </div>
     <div class="col-10">
       <div class="row">
-        <app-tool-bar></app-tool-bar>
+        <app-tool-bar style="padding: 0px"></app-tool-bar>
         <!-- <app-nav></app-nav> -->
       </div>
       <div class="page-wrapper">
@@ -48,26 +48,26 @@
                       The actual rendered columns are set as a property on the row definition" -->
 
                 <!-- Position Column -->
-                <ng-container matColumnDef="Name">
+                <ng-container matColumnDef="name">
                   <th mat-header-cell *matHeaderCellDef>Name</th>
                   <td mat-cell *matCellDef="let element">
-                    {{ element.Name }}
+                    {{ element.name }}
                   </td>
                 </ng-container>
 
                 <!-- Name Column -->
-                <ng-container matColumnDef="Create">
-                  <th mat-header-cell *matHeaderCellDef>Create By</th>
+                <ng-container matColumnDef="benefit">
+                  <th mat-header-cell *matHeaderCellDef>Benefit</th>
                   <td mat-cell *matCellDef="let element">
-                    {{ element.Create }}
+                    {{ element.benefit }}
                   </td>
                 </ng-container>
 
                 <!-- Weight Column -->
-                <ng-container matColumnDef="Action">
-                  <th mat-header-cell *matHeaderCellDef>Action</th>
+                <ng-container matColumnDef="protien">
+                  <th mat-header-cell *matHeaderCellDef>Protien</th>
                   <td mat-cell *matCellDef="let element">
-                    {{ element.Action }}
+                    {{ element.protien }}
                   </td>
                 </ng-container>
 
@@ -80,8 +80,12 @@
                     >
                     <mat-menu #menu="matMenu">
                       <!-- <button mat-menu-item>Add</button> -->
-                      <button mat-menu-item>Edit</button>
-                      <button mat-menu-item>Delete</button>
+                      <button mat-menu-item (click)="EditData(element)">
+                        Edit
+                      </button>
+                      <button (click)="DeleteData(element._id)" mat-menu-item>
+                        Delete
+                      </button>
                     </mat-menu>
                     <!-- <mat-menu #menu="matMenu">
                     <button mat-menu-item>Edit</button>

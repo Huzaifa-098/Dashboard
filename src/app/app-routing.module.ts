@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { AddDataComponent } from './project/add-data/add-data.component';
 import { DashboardComponent } from './project/dashboard/dashboard.component';
 import { DryfruitDetailsComponent } from './project/dryfruit-details/dryfruit-details.component';
 import { EditDataComponent } from './project/edit-data/edit-data.component';
@@ -68,6 +69,10 @@ const routes: Routes = [
     path: 'tool',
     // canActivate: [AuthGuard],
     component: ToolBarComponent,
+  },
+  {
+    path: 'add-data',
+    component: AddDataComponent,
   },
 ];
 

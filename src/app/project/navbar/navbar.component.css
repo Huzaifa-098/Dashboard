@@ -67,3 +67,19 @@ span {
 .col-sm-2 {
   width: 106%;
 }
+.wide {
+  height: 97.8vh;
+  background: #272f52;
+  width: 109%;
+}
+@media screen and (max-width: 992px) {
+  .wide {
+    width: 150%;
+  }
+}
+@media screen and (max-width: 664px) {
+  .wide {
+    width: 200%;
+    margin: 100px;
+  }
+}
